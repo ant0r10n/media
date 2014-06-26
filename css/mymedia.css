@@ -1,5 +1,161 @@
 @charset "UTF-8";
 /* CSS Document */
-}#lbox {
+#lbox {
 	background-color: #0F0;
+}
+
+#typebg {
+	background-color: #9CF;
+	text-align: center;
+}
+#cdbg {
+	background-color: #E1EBF3;
+    text-align: center;
+	}
+#cdbgl {
+	background-color: #E1EBF3;
+	text-align: center;
+	border: 1px solid #000;
+	}
+#vhsbg {
+	background-color: #D699AD;
+	text-align: center;
+}
+#dvdbg {
+	background-color: #FFB2B2;
+	text-align: center;
+}
+#dvdbgl {
+	background-color: #FFB2B2;
+	text-align: center;
+	border: 1px solid #000;
+}
+#gamebg {
+	background-color: #CC80CC;
+	text-align: center;
+}
+#gamebgl {
+	background-color: #CC80CC;
+	text-align: center;
+	border: 1px solid #000;
+	}
+#bg {
+	background-color: #ffffff;
+	text-align: center;
+}
+#posterbg {
+	background-color: #CCB280;
+	text-align: center;
+}
+#posterbgl {
+	background-color: #CCB280;
+	text-align: center;
+	border: 1px solid #000;
+	}
+	
+#cassettebg {
+	background-color: #85AD33;
+	text-align: center;
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	.mbltxt {
+        font-size:200%;
+    }
+
+}
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	.mbltxt {
+        font-size:300%;
+    }
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	.mbltxt {
+        font-size:350%;
+    }
+
+}
+
+}
+#cassettebg {
+	background-color: #85AD33;
+	text-align: center;
+	border: 1px solid #000;
+}
+}#type {
+	color: #03F;
+}
+}#date {
+	color: #F00;
+}
+.artist {
+	font-weight: bold;
+}
+#dvd {
+	color: #F00;
+	font-weight: bold;
+}
+#cd {
+	color: #00c;
+	font-weight: bold;
+}
+#game {
+	color: #609;
+	font-weight: bold;
+}
+#vhs {
+	color: #C2FFEB;
+	font-weight: bold;
+}
+#poster {
+	color: #900;
+	font-weight: bold;
+}
+#cassette {
+	color: #003300;
+	font-weight: bold;
+}
+
+#small {
+	font-size: 9px;
+}
+#smalltext {
+	font-size: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+}
+#digital {
+	color: #2C8;
+	font-weight: bold;
+}
+#digitalbg {
+	background-color: #BFD;
+	text-align: center;
+	border: 1px solid #BFD;
+}
+#ps2 {
+	color: #12E;
+	font-weight: bold;
+}
+#ps2bg {
+	background-color: #BBF;
+	text-align: center;
+	border: 1px solid #BBF;
 }

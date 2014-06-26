@@ -121,10 +121,10 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
   <div class="container">
   <?php do { ?>
     <div class="row">
-      <div class="col-md-2 col-xs-12 id="<?php echo $row_rsArtist['type']; ?>bg"><img class="img-rounded"  height="50" width="50"src="mymedia/images/<?php echo $row_rsArtist['image']; ?>" alt="image"></div>
-      <div class="col-md-1 col-xs-1 pull-left" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo $row_rsArtist['type']; ?></span></div>
-      <div class="col-md-3 col-xs-11" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo $row_rsArtist['artist']; ?></span></div>
-      <div class="col-md-5 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><a href="item.php?recordID=<?php echo $row_rsArtist['id']; ?>"><?php echo $row_rsArtist['title']; ?></a></span></div>
+      <div class="col-md-2 col-xs-12"><img class="img-rounded" height="50" width="50"src="mymedia/images/<?php echo $row_rsArtist['image']; ?>" alt="image"></div>
+      <div class="col-md-1 col-xs-1"><?php echo $row_rsArtist['type']; ?></div>
+      <div class="col-md-3 col-xs-11"><?php echo $row_rsArtist['artist']; ?></div>
+      <div class="col-md-5 col-xs-12"><a href="item.php?recordID=<?php echo $row_rsArtist['id']; ?>"><?php echo $row_rsArtist['title']; ?></a></div>
       <div class="col-md-1" col-xs-12=""></div>
     </div>
     <?php } while ($row_rsArtist = mysql_fetch_assoc($rsArtist)); ?>
@@ -159,7 +159,22 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
 
   <!-- end pagnation section-->
 
-id="<?php echo $row_rsArtist['type']; ?>bg"
+
+
+
+<!--end DW CODE--->
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
