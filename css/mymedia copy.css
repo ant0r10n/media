@@ -123,21 +123,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', end
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-	
+	.mbltxt {
+        font-size:200%;
+    }
 
 }
 
-
+}
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-	
+	.mbltxt {
+        font-size:300%;
+    }
 
 }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
-	
+	.mbltxt {
+        font-size:350%;
+    }
+
+}
 
 }
 #cassettebg {
