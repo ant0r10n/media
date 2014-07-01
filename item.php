@@ -84,7 +84,7 @@ $totalPages_DetailRS1 = ceil($totalRows_DetailRS1/$maxRows_DetailRS1)-1;
 <body>
 
   <!-- start nav section-->
-  <div class="navbar navbar-default navbar-static-top">
+  <div class="navbar navbar-default navbar-fixed-top">
     <style>
       .body{padding-top:70px}
     </style>
@@ -96,14 +96,14 @@ $totalPages_DetailRS1 = ceil($totalRows_DetailRS1/$maxRows_DetailRS1)-1;
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">MyMedia - Hello</a>
+        <a class="navbar-brand" href="index.php">MyMedia - Item Detail</a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="">
             <a href="help.php">Help</a>
           </li>
-          <li>
+          <li class="disabled">
             <a href="#" onClick="history.go(-1)">Back</a>
           </li>
           <li class="active">
@@ -140,7 +140,7 @@ $totalPages_DetailRS1 = ceil($totalRows_DetailRS1/$maxRows_DetailRS1)-1;
       <!--start image section-->
       <div class="col-md-7 col-xs-12">
      <img class="center img-responsive" src="mymedia/images/<?php echo $row_DetailRS1['image']; ?>">
-     <img class="center img-responsive" src="mymedia/images/<?php echo $row_DetailRS1['image2']; ?>" alt=" " ><br>
+     <img class="center img-responsive" src="mymedia/images/<?php echo $row_DetailRS1['image2']; ?>" alt="" ><br>
 	
 <span class="bold">Description: <?php echo $row_DetailRS1['description']; ?></span>
 </div>

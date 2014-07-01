@@ -185,7 +185,7 @@ $totalPages_rsImagePrice = ceil($totalRows_rsImagePrice/$maxRows_rsImagePrice)-1
 
 <head>
   <meta charset="utf-8">
-  <title>MyMedia -  Buy</title>
+  <title>MyMedia -  Personal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -325,14 +325,14 @@ $totalPages_rsImagePrice = ceil($totalRows_rsImagePrice/$maxRows_rsImagePrice)-1
       .body{padding-top:70px}
     </style>
     <div class="container">
-      <div class="navbar-header mmnav">
+      <div class="navbar-header mmnav navbar-fixed-top">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">MyMedia - Buy</a>
+        <a class="navbar-brand" href="#">MyMedia - Personal</a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -493,17 +493,17 @@ $totalPages_rsImagePrice = ceil($totalRows_rsImagePrice/$maxRows_rsImagePrice)-1
     <div class="col-md-3">
       <h2>Find CD's</h2>
       <p>Mostly my collection of cd's but there are other collections too.</p>
-      <a class="btn btn-primary" href="detail.php">Search CD's</a>
+      <a class="btn btn-primary" href="searchcds.php">Search CD's</a>
     </div>
     <div class="col-md-4">
       <h2>Find DVD's</h2>
-      <p>Varied DVD titles from all over. wow</p>
-      <a class="btn btn-primary" href="#">Search DVD's</a>
+      <p>Varied DVD titles from all over.This is just to make it line up better.</p>
+      <a class="btn btn-primary" href="detail.php">Search DVD's</a>
     </div>
     <div class="col-md-3">
       <h2>Find More</h2>
-      <p>Anything could be in this group, anything.</p>
-      <a class="btn btn-primary" href="#">Search Everything</a>
+      <p>Anything could be in this group, anything.This is just to make it line up.</p>
+      <a class="btn btn-primary" href="detail.php">Search Everything</a>
     </div>
     <div class="col-md-1"></div>
   </div>

@@ -86,7 +86,7 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
 
 <body>
   <!-- start nav section-->
-  <div class="navbar navbar-default navbar-static-top">
+  <div class="navbar navbar-default ">
     <style>
       .body{padding-top:70px}
     </style>
@@ -98,7 +98,7 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">MyMedia - Buy</a>
+        <a class="navbar-brand" href="index.php">MyMedia - Records <?php echo ($startRow_rsArtist + 1) ?> to <?php echo min($startRow_rsArtist + $maxRows_rsArtist, $totalRows_rsArtist) ?> of <?php echo $totalRows_rsArtist ?></a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -119,47 +119,58 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
 
   <!-- start repeat section-->
   <div class="container">
+ 
+  
   <?php do { ?>
+  
+   <div class="row"><div class="col-md-12 col-xs-12" id="topper"></div>  
+  </div>
+  
     <div class="row">
-      <div class="col-md-2 col-xs-12 id="<?php echo $row_rsArtist['type']; ?>bg"><img class="img-rounded"  height="50" width="50"src="mymedia/images/<?php echo $row_rsArtist['image']; ?>" alt="image"></div>
-      <div class="col-md-1 col-xs-1 pull-left" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo $row_rsArtist['type']; ?></span></div>
-      <div class="col-md-3 col-xs-11" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo $row_rsArtist['artist']; ?></span></div>
-      <div class="col-md-5 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><a href="item.php?recordID=<?php echo $row_rsArtist['id']; ?>"><?php echo $row_rsArtist['title']; ?></a></span></div>
-      <div class="col-md-1" col-xs-12=""></div>
+      <div class="col-md-1 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><img class="img-rounded"  height="50" width="50"src="mymedia/images/<?php echo $row_rsArtist['image']; ?>" alt="image"></div>
+      <div class="col-md-2 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo strtoupper($row_rsArtist['type']); ?></span></div>
+      <div class="col-md-3 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo ucwords($row_rsArtist['artist']); ?></span></div>
+      <div class="col-md-6 col-xs-12 text-left"" id="<?php echo $row_rsArtist['type']; ?>bg"><span  id="<?php echo $row_rsArtist['type']; ?>" ><a href="item.php?recordID=<?php echo $row_rsArtist['id']; ?>"> <?php echo ucwords($row_rsArtist['title']); ?></a></span></div>
+      
     </div>
     <?php } while ($row_rsArtist = mysql_fetch_assoc($rsArtist)); ?>
   </div>
   <!-- end repeat section-->
 
-  <!-- start pagnation section-->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-xs-12"><table border="0">
-  <tr>
-    <td><?php if ($pageNum_rsArtist > 0) { // Show if not first page ?>
-        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, 0, $queryString_rsArtist); ?>">First-</a>
-        <?php } // Show if not first page ?></td>
-    <td><?php if ($pageNum_rsArtist > 0) { // Show if not first page ?>
-        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, max(0, $pageNum_rsArtist - 1), $queryString_rsArtist); ?>">-Previous</a>
-        <?php } // Show if not first page ?></td>
-    <td><?php if ($pageNum_rsArtist < $totalPages_rsArtist) { // Show if not last page ?>
-        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, min($totalPages_rsArtist, $pageNum_rsArtist + 1), $queryString_rsArtist); ?>">Next-</a>
-        <?php } // Show if not last page ?></td>
-    <td><?php if ($pageNum_rsArtist < $totalPages_rsArtist) { // Show if not last page ?>
-        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, $totalPages_rsArtist, $queryString_rsArtist); ?>">-Last</a>
-        <?php } // Show if not last page ?></td>
-  </tr>
-</table>
 
-</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <ul class="pagination">
+          
+          <li>
+            <?php if ($pageNum_rsArtist > 0) { // Show if not first page ?>
+        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, 0, $queryString_rsArtist); ?>"><span class="glyphicon glyphicon-hand-left"></span> First </a>
+        <?php } // Show if not first page ?>
+          </li>
+          <li>
+            <?php if ($pageNum_rsArtist > 0) { // Show if not first page ?>
+        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, max(0, $pageNum_rsArtist - 1), $queryString_rsArtist); ?>"> Previous</a>
+        <?php } // Show if not first page ?>
+          </li>
+          <li>
+            <?php if ($pageNum_rsArtist < $totalPages_rsArtist) { // Show if not last page ?>
+        <a href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, min($totalPages_rsArtist, $pageNum_rsArtist + 1), $queryString_rsArtist); ?>">Next </a>
+        <?php } // Show if not last page ?>
+          </li>
+          <li>
+            <?php if ($pageNum_rsArtist < $totalPages_rsArtist) { // Show if not last page ?>
+        <a  href="<?php printf("%s?pageNum_rsArtist=%d%s", $currentPage, $totalPages_rsArtist, $queryString_rsArtist); ?>">  Last <span class="glyphicon glyphicon-hand-right"></span></a>
+        <?php } // Show if not last page ?>
+          </li>
+          
+          
+       </ul>
+      </div>
     </div>
-    <div class="row">
-      <div class="col-md-12 col-xs-12">Records <?php echo ($startRow_rsArtist + 1) ?> to <?php echo min($startRow_rsArtist + $maxRows_rsArtist, $totalRows_rsArtist) ?> of <?php echo $totalRows_rsArtist ?></div></div>
-  </div>
+  </div>  
 
-  <!-- end pagnation section-->
-
-id="<?php echo $row_rsArtist['type']; ?>bg"
 </body>
 
 </html>
