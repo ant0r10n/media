@@ -77,7 +77,11 @@ $totalPages_DetailRS1 = ceil($totalRows_DetailRS1/$maxRows_DetailRS1)-1;
 
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   
-
+<style>
+      body{
+		  margin-top:70px;
+		  }
+    </style>
   
 </head>
 
@@ -85,9 +89,7 @@ $totalPages_DetailRS1 = ceil($totalRows_DetailRS1/$maxRows_DetailRS1)-1;
 
   <!-- start nav section-->
   <div class="navbar navbar-default navbar-fixed-top">
-    <style>
-      .body{padding-top:70px}
-    </style>
+    
     <div class="container">
       <div class="nav-tabs">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

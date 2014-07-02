@@ -77,33 +77,33 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
   <meta charset="utf-8">
   <title>MyMedia - Search By View</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="buy used media like cd's dvd's vhs tabes and more.">
+  <meta name="author" content="0r10n network">
   <link href="mymedia/resources/initializr/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/mymedia.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    
 </head>
 
 <body>
   <!-- start nav section-->
-  <div class="navbar navbar-default ">
-    <style>
-      .body{padding-top:70px}
-    </style>
-    <div class="container">
-      <div class="navbar-header">
+  <div class="container">
+  <div class="navbar navbar-default navbar-fixed-top">
+   <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">MyMedia - Records <?php echo ($startRow_rsArtist + 1) ?> to <?php echo min($startRow_rsArtist + $maxRows_rsArtist, $totalRows_rsArtist) ?> of <?php echo $totalRows_rsArtist ?></a>
+        <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home"></span> MyMedia - Records <?php echo ($startRow_rsArtist + 1) ?> to <?php echo min($startRow_rsArtist + $maxRows_rsArtist, $totalRows_rsArtist) ?> of <?php echo $totalRows_rsArtist ?></a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="">
-            <a href="help.php">Help</a>
+            <a href="help.php">Help <span class="glyphicon glyphicon-question-sign"</span></a>
           </li>
           <li class="disabled">
             <a href="#">More</a>
@@ -127,8 +127,11 @@ $queryString_rsArtist = sprintf("&totalRows_rsArtist=%d%s", $totalRows_rsArtist,
   </div>
   
     <div class="row">
-      <div class="col-md-1 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><img class="img-rounded"  height="50" width="50"src="mymedia/images/<?php echo $row_rsArtist['image']; ?>" alt="image"></div>
-      <div class="col-md-2 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo strtoupper($row_rsArtist['type']); ?></span></div>
+      <div class="col-md-1 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><img class="img-rounded"  height="50" width="50"src="mymedia/images/<?php echo $row_rsArtist['image']; ?>" alt="image">
+      
+      
+      </div>
+      <div class="col-md-2 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><img src="img/icons/<?php echo $row_rsArtist['type']; ?>.png" height="35px" width="35" alt="<?php echo $row_rsArtist['type']; ?>"><!--<?php echo strtoupper($row_rsArtist['type']); ?> --></span></div>
       <div class="col-md-3 col-xs-12" id="<?php echo $row_rsArtist['type']; ?>bg"><span id="<?php echo $row_rsArtist['type']; ?>"><?php echo ucwords($row_rsArtist['artist']); ?></span></div>
       <div class="col-md-6 col-xs-12 text-left"" id="<?php echo $row_rsArtist['type']; ?>bg"><span  id="<?php echo $row_rsArtist['type']; ?>" ><a href="item.php?recordID=<?php echo $row_rsArtist['id']; ?>"> <?php echo ucwords($row_rsArtist['title']); ?></a></span></div>
       

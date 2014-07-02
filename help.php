@@ -25,7 +25,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">MyMedia - Buy</a>
+        <a class="navbar-brand" href="index.php">MyMedia - Help</a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -47,7 +47,7 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <img src="http://placehold.it/1024x600" class="img-responsive">
+        <img src="img/frame0299.png" class="img-responsive">
       </div>
       <div class="col-md-1"></div>
     </div>

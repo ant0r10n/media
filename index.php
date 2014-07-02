@@ -320,23 +320,21 @@ $totalPages_rsImagePrice = ceil($totalRows_rsImagePrice/$maxRows_rsImagePrice)-1
     </style>
     <!-- sliderh style end -->
 <!--slider script end-->
-  <div class="navbar navbar-default navbar-static-top">
-    <style>
-      .body{padding-top:70px}
-    </style>
-    <div class="container">
-      <div class="navbar-header mmnav navbar-fixed-top">
+  
+    
+    <div class="container"><div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header navbar-fixed-top">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">MyMedia - Personal</a>
+        <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home"></span> MyMedia - Personal</a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="">
+          <li>
             <a href="help.php">Help</a>
           </li>
           <li class="disabled">
@@ -490,45 +488,24 @@ $totalPages_rsImagePrice = ceil($totalRows_rsImagePrice/$maxRows_rsImagePrice)-1
 
   <div class="row" id="lbox">
     <div class="col-md-1"></div>
-    <div class="col-md-3">
+    <div class="col-md-3 lilbox">
       <h2>Find CD's</h2>
       <p>Mostly my collection of cd's but there are other collections too.</p>
       <a class="btn btn-primary" href="searchcds.php">Search CD's</a>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 lilbox">
       <h2>Find DVD's</h2>
       <p>Varied DVD titles from all over.This is just to make it line up better.</p>
       <a class="btn btn-primary" href="detail.php">Search DVD's</a>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 lilbox">
       <h2>Find More</h2>
       <p>Anything could be in this group, anything.This is just to make it line up.</p>
       <a class="btn btn-primary" href="detail.php">Search Everything</a>
     </div>
     <div class="col-md-1"></div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 </body>
 
 </html>
